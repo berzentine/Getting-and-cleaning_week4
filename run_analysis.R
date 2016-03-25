@@ -1,5 +1,4 @@
 library(reshape2)
-
 filename <- "getdata_dataset.zip"
 
 ## Download and unzip the dataset:
@@ -23,7 +22,6 @@ featuresWanted.names <- features[featuresWanted,2]
 featuresWanted.names = gsub('-mean', 'Mean', featuresWanted.names)
 featuresWanted.names = gsub('-std', 'Std', featuresWanted.names)
 featuresWanted.names <- gsub('[-()]', '', featuresWanted.names)
-
 
 # Load the datasets
 train <- read.table("UCI HAR Dataset/train/X_train.txt")[featuresWanted]
